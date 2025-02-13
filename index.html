@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>LDWF Documents Sections</title>
+  <link rel='stylesheet' href='https://codepen.io/isralduke/pen/MWMYOox.css'>
+<link rel='stylesheet' href='https://codepen.io/isralduke/pen/dyBPZjv.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="content-container">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<div class="form-section-header">
+					<h2 class="legend mb-1">Documents</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row mb-8">
+			<div class="col-12 col-lg-6">
+				<button type="button" class="btn btn-outline-ui">
+					<span class="icon fas fa-plus" aria-hidden="true"></span> Attach 
+				</button>
+			</div>
+		</div>
+		<!-- hiding this row from assistive technologies because it’s a visual help for sighted users -->
+		<!-- the icons will have their own AT attributes at the end of each row -->
+		<div class="row mb-4">
+			<div class="col-12 col-lg-6">
+				<span id="voiceControlHelp">Voice control users: You can act on Documents by saying the action and the document number. For example, “Review 1”.</span>
+			</div>
+			<div class="col-12 col-lg-6">
+				<div class="voice-control-legend">
+					<span class="visually-hidden">The following icons refer to specific functions of the buttons on each table row.</span>
+					<div class="voice-control-legend-item">
+						<span class="icon fa fa-eye text-ui" aria-hidden="true"></span> 
+						<span class="visually-hidden">An eye icon means</span>
+						<span id="iconLabelReview">Review</span>
+					</div>
+					<div class="voice-control-legend-item">
+						<span class="icon fa fa-print text-ui" aria-hidden="true"></span> 
+						<span class="visually-hidden">A printer icon means </span>
+						<span id="iconLabelPrint">Print</span>
+					</div>
+					<div class="voice-control-legend-item">
+						<span class="icon fa fa-download text-ui" aria-hidden="true"></span> 
+						<span class="visually-hidden">A down-pointing arrow means </span>
+						<span id="iconLabelDownload">Download</span>
+					</div>
+					<div class="voice-control-legend-item">
+						<span class="icon fa fa-trash text-ui" aria-hidden="true"></span> 
+						<span class="visually-hidden">A trashcan means</span>
+						<span id="iconLabelDelete">Delete</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" role="list">
+
+
+			<!-- for each document: pay attention to the documentID -->
+			<!-- use the documentID in the loop for accessibility -->
+			<!-- the documentID is referenced by ARIA attributes -->
+			<div class="col-12 col-lg-6" role="listitem">
+				<div class="card">
+					<div class="card-body">
+						<div class="document-actions">
+							<div class="document-ident">
+								<span class="badge badge-ui" id="document1">
+									<span class="visually-hidden">Document </span> 1
+								</span>
+								<span class="filetype">PDF</span>
+								<span class="filename">FilenameHere</span>
+							</div>
+							<div class="document-actions-buttons">
+								<button class="btn btn-link" type="button" aria-labelledby="iconLabelReview document1">
+									<span class="icon fa fa-eye" aria-hidden="true"></span> 
+								</button>
+								<button class="btn btn-link" type="button" aria-labelledby="iconLabelPrint document1">
+									<span class="icon fa fa-print" aria-hidden="true"></span> 
+								</button>
+								<button class="btn btn-link" type="button" aria-labelledby="iconLabelDownload document1">
+									<span class="icon fa fa-download" aria-hidden="true"></span> 
+								</button>
+								<button class="btn btn-link" type="button" aria-labelledby="iconLabelDelete document1">
+									<span class="icon fa fa-trash" aria-hidden="true"></span> 
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- / for each document -->
+			
+			
+			<!-- for 0 documents -->
+			<div class="col-12 col-lg-6" role="listitem">
+				<div class="card card-empty">
+					<div class="card-body">No Documents added</div>
+				</div>
+			</div>
+			<!-- / for 0 documents -->
+
+
+		</div>
+	</div>
+</div>
+
+
+
+
+<div class="content-container">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<div class="form-section-header">
+					<h2 class="legend mb-1">Documents</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row mb-4">
+			<div class="col-12 col-lg-6">
+				<button type="button" class="btn btn-outline-ui">
+					<span class="icon fas fa-plus" aria-hidden="true"></span> Add a Document
+				</button>
+			</div>
+		</div>
+
+		<div class="row" role="list">
+			<!-- for each document: pay attention to the documentID -->
+			<!-- use the documentID in the loop for accessibility -->
+			<!-- the documentID is referenced by ARIA attributes -->
+			<div class="col-12" role="listitem">
+				<div class="card">
+					<div class="card-body">
+						<div class="document-actions">
+							<div class="document-ident">
+								<span class="badge badge-ui" id="document1">
+									<span class="visually-hidden">Document </span> 4
+								</span>
+								<span class="filetype">PDF</span>
+								<span class="filename">FilenameHere</span>
+							</div>
+							<div class="document-actions-buttons">
+								<button class="btn btn-link" type="button">
+									<span class="icon fa fa-eye" aria-hidden="true"></span> Review 4
+								</button>
+								<button class="btn btn-link" type="button">
+									<span class="icon fa fa-print" aria-hidden="true"></span> Print 4
+								</button>
+								<button class="btn btn-link" type="button">
+									<span class="icon fa fa-download" aria-hidden="true"></span> Download 4
+								</button>
+								<button class="btn btn-link" type="button">
+									<span class="icon fa fa-trash" aria-hidden="true"></span> Delete 4
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- / for each document -->
+
+
+			<!-- for 0 documents -->
+			<div class="col-12" role="listitem">
+				<div class="card card-empty">
+					<div class="card-body">No Documents added</div>
+				</div>
+			</div>
+			<!-- / for 0 documents -->
+			
+			
+
+		</div>
+	</div>
+</div>
+<!-- partial -->
+  <script src='https://pelican.ots.la.gov/js/pelican.bundle.min.js'></script>
+<script src='https://pelican.ots.la.gov/js/default.js'></script>
+</body>
+</html>
