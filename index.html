@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>LDWF Documents Sections</title>
+  <title>Documents Section</title>
   <link rel='stylesheet' href='https://codepen.io/isralduke/pen/MWMYOox.css'>
 <link rel='stylesheet' href='https://codepen.io/isralduke/pen/dyBPZjv.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
@@ -10,9 +10,9 @@
 <link rel="stylesheet" href="./style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body class="p-0">
 <!-- partial:index.partial.html -->
-<div class="content-container">
+<div class="content-container mt-8">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-12">
@@ -23,10 +23,14 @@
 		</div>
 		<div class="row mb-8">
 			<div class="col-12 col-lg-6">
-				<a href="https://google.com" class="btn btn-outline-ui">
+				<input class="visually-hidden" type="file" id="formFile">
+				<label for="formFile" class="btn btn-outline-ui mb-0">
 					<span class="icon fas fa-plus" aria-hidden="true"></span> Attach 
-				</a>
+				</label>
+
 			</div>
+
+			
 		</div>
 		<!-- hiding this row from assistive technologies because it’s a visual help for sighted users -->
 		<!-- the icons will have their own AT attributes at the end of each row -->
@@ -75,19 +79,19 @@
 									<span class="visually-hidden">Document </span> 1
 								</span>
 								<span class="filetype">PDF</span>
-								<span class="filename">FilenameHere</span>
+								<span class="filename">Filename</span>
 							</div>
 							<div class="document-actions-buttons">
 								<a href="https://google.com" class="btn btn-link" aria-labelledby="iconLabelReview document1">
 									<span class="icon fa fa-eye" aria-hidden="true"></span> 
 								</a>
-								<a href="https://google.com" class="btn btn-link" aria-labelledby="iconLabelPrint document1">
+								<a href="https://apple.com" class="btn btn-link" aria-labelledby="iconLabelPrint document1">
 									<span class="icon fa fa-print" aria-hidden="true"></span> 
 								</a>
-								<a href="https://google.com" class="btn btn-link" aria-labelledby="iconLabelDownload document1">
+								<a href="https://microsoft.com" class="btn btn-link" aria-labelledby="iconLabelDownload document1">
 									<span class="icon fa fa-download" aria-hidden="true"></span> 
 								</a>
-								<a href="https://google.com" class="btn btn-link" aria-labelledby="iconLabelDelete document1">
+								<a href="https://nintendo.com" class="btn btn-link" aria-labelledby="iconLabelDelete document1">
 									<span class="icon fa fa-trash" aria-hidden="true"></span> 
 								</a>
 							</div>
@@ -96,6 +100,76 @@
 				</div>
 			</div>
 			<!-- / for each document -->
+
+
+
+
+			<!-- extra example -->
+			<div class="col-12 col-lg-6" role="listitem">
+				<div class="card">
+					<div class="card-body">
+						<div class="document-actions">
+							<div class="document-ident">
+								<span class="badge badge-ui" id="document2">
+									<span class="visually-hidden">Document </span> 2
+								</span>
+								<span class="filetype">XLSX</span>
+								<span class="filename">Spreadsheet Name</span>
+							</div>
+							<div class="document-actions-buttons">
+								<a href="https://github.com" class="btn btn-link" aria-labelledby="iconLabelReview document2">
+									<span class="icon fa fa-eye" aria-hidden="true"></span> 
+								</a>
+								<a href="https://polygon.com" class="btn btn-link" aria-labelledby="iconLabelPrint document2">
+									<span class="icon fa fa-print" aria-hidden="true"></span> 
+								</a>
+								<a href="https://macrumors.com" class="btn btn-link" aria-labelledby="iconLabelDownload document2">
+									<span class="icon fa fa-download" aria-hidden="true"></span> 
+								</a>
+								<a href="https://pelican.ots.la.gov" class="btn btn-link" aria-labelledby="iconLabelDelete document2">
+									<span class="icon fa fa-trash" aria-hidden="true"></span> 
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- / extra example -->
+
+
+
+
+			<!-- extra example -->
+			<div class="col-12 col-lg-6" role="listitem">
+				<div class="card">
+					<div class="card-body">
+						<div class="document-actions">
+							<div class="document-ident">
+								<span class="badge badge-ui" id="document3">
+									<span class="visually-hidden">Document </span> 3
+								</span>
+								<span class="filetype">JPG</span>
+								<span class="filename">Image-008765</span>
+							</div>
+							<div class="document-actions-buttons">
+								<a href="https://codeforamerica.org/" class="btn btn-link" aria-labelledby="iconLabelReview document3">
+									<span class="icon fa fa-eye" aria-hidden="true"></span> 
+								</a>
+								<a href="https://smashingmagazine.com/" class="btn btn-link" aria-labelledby="iconLabelPrint document3">
+									<span class="icon fa fa-print" aria-hidden="true"></span> 
+								</a>
+								<a href="https://webaim.org/" class="btn btn-link" aria-labelledby="iconLabelDownload document3">
+									<span class="icon fa fa-download" aria-hidden="true"></span> 
+								</a>
+								<a href="https://a11ysupport.io/" class="btn btn-link" aria-labelledby="iconLabelDelete document3">
+									<span class="icon fa fa-trash" aria-hidden="true"></span> 
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- / extra example -->
 			
 			
 			<!-- for 0 documents -->
@@ -112,75 +186,6 @@
 </div>
 
 
-
-
-<div class="content-container">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-12">
-				<div class="form-section-header">
-					<h2 class="legend mb-1">Documents</h2>
-				</div>
-			</div>
-		</div>
-		<div class="row mb-4">
-			<div class="col-12 col-lg-6">
-				<a href="https://google.com" class="btn btn-outline-ui">
-					<span class="icon fas fa-plus" aria-hidden="true"></span> Add a Document
-				</a>
-			</div>
-		</div>
-
-		<div class="row" role="list">
-			<!-- for each document: pay attention to the documentID -->
-			<!-- use the documentID in the loop for accessibility -->
-			<!-- the documentID is referenced by ARIA attributes -->
-			<div class="col-12" role="listitem">
-				<div class="card">
-					<div class="card-body">
-						<div class="document-actions">
-							<div class="document-ident">
-								<span class="badge badge-ui" id="document1">
-									<span class="visually-hidden">Document </span> 4
-								</span>
-								<span class="filetype">PDF</span>
-								<span class="filename">FilenameHere</span>
-							</div>
-							<div class="document-actions-buttons">
-								<a href="https://google.com" class="btn btn-link">
-									<span class="icon fa fa-eye" aria-hidden="true"></span> Review 4
-								</a>
-								<a href="https://google.com" class="btn btn-link">
-									<span class="icon fa fa-print" aria-hidden="true"></span> Print 4
-								</a>
-								<a href="https://google.com" class="btn btn-link">
-									<span class="icon fa fa-download" aria-hidden="true"></span> Download 4
-								</a>
-								<a href="https://google.com" class="btn btn-link">
-									<span class="icon fa fa-trash" aria-hidden="true"></span> Delete 4
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- / for each document -->
-
-
-			<!-- for 0 documents -->
-			<div class="col-12" role="listitem">
-				<div class="card card-empty">
-					<div class="card-body">No Documents added</div>
-				</div>
-			</div>
-			<!-- / for 0 documents -->
-			
-			
-
-		</div>
-	</div>
-</div>
-<!-- partial -->
   <script src='https://pelican.ots.la.gov/js/pelican.bundle.min.js'></script>
 <script src='https://pelican.ots.la.gov/js/default.js'></script>
 </body>
